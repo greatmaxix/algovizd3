@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    .node {
+        stroke: #fff;
+        stroke-width: 1.5px;
+    }
+
+    .link {
+        stroke: #999;
+        stroke-opacity: .6;
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <label for="algorithm">Algorithm</label>
+                <select id="algorithm" class="form-control">
+                    <option value="bfs">Breadth First Search</option>
+                    <option value="dfs">Depth First Search</option>
+                    <option value="dijkstra">Dijkstra</option>
+                    <option value="aStar">A*</option>
+                </select>
+            </div>
+            <div class="col" style="display: none;">
+                <label for="numNodes">Number of Nodes</label>
+                <input onchange="updateOptions()" type="number" min="5" max="100" id="numNodes" value="29"
+                    class="form-control">
+            </div>
+            <div class="col">
+                <label for="startNode">Start Node</label>
+                <select id="startNode" class="form-control">
+                </select>
+            </div>
+            <div class="col">
+                <label for="endNode">End Node</label>
+                <select id="endNode" class="form-control">
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <button id="generate" class="btn btn-primary" onclick="prev()">Prev</button>
+            </div>
+            <div class="col">
+                <button id="generate" class="btn btn-primary" onclick="next()">Next</button>
+            </div>
+        </div>
+
+        <div id="infovis"></div>
+    </div>
+
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="main.js"></script>
+    <script>
+    </script>
+</body>
