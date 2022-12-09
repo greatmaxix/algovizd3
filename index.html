@@ -31,22 +31,19 @@
             </div>
             <div class="col">
                 <label for="startNode">Start Node</label>
-                <select id="startNode" class="form-control">
+                <select id="startNode" class="form-control" onchange="updateStartNode()">
                 </select>
             </div>
             <div class="col">
                 <label for="endNode">End Node</label>
-                <select id="endNode" class="form-control">
+                <select id="endNode" class="form-control" onchange="updateEndNode()">
                 </select>
             </div>
         </div>
 
         <div class="row mt-3">
             <div class="col">
-                <button id="generate" class="btn btn-primary" onclick="prev()">Prev</button>
-            </div>
-            <div class="col">
-                <button id="generate" class="btn btn-primary" onclick="next()">Next</button>
+                <button id="generate" class="btn btn-primary" onclick="startDijkstraAnimation()">Animate</button>
             </div>
         </div>
 
